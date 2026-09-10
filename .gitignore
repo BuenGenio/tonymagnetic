@@ -1,0 +1,11 @@
+# Source material and working files — large, and not needed to serve the site.
+# Keep these locally; they are the originals the site derivatives are built from.
+assets/images/_src/
+assets/images/_candidates/
+
+# Build output. Regenerate with tools/build-pdf.sh
+dist/
+
+# OS noise
+.DS_Store
+Thumbs.db
