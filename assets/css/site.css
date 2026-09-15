@@ -35,7 +35,7 @@
   --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
 
   --gutter: clamp(1.25rem, 4vw, 4.5rem);
-  --section: clamp(5.5rem, 10vw, 10.5rem);
+  --section: clamp(3.5rem, 6vw, 6rem);
   --header-height: 5.25rem;
   --ease: cubic-bezier(.22, .61, .36, 1);
 
@@ -132,11 +132,11 @@ p { text-wrap: pretty; }
 .eyebrow {
   display: block;
   color: var(--rust);
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 .section-heading {
-  margin: 0 0 clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0 0 clamp(1.75rem, 4vw, 3rem);
   font-size: clamp(2.8rem, 7vw, 7rem);
 }
 
@@ -409,7 +409,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 }
 
 .hero-foot {
-  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  margin-top: clamp(1.75rem, 4vw, 3rem);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 2.5rem;
@@ -438,7 +438,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 
 .manifesto cite {
   display: block;
-  margin-top: clamp(1.75rem, 3vw, 2.75rem);
+  margin-top: clamp(1.25rem, 2vw, 1.75rem);
   font-family: var(--sans);
   font-style: normal;
   font-size: .74rem;
@@ -458,7 +458,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
-  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+  margin-bottom: clamp(1.75rem, 3.5vw, 3rem);
 }
 .chapters-head .section-heading { margin-bottom: 0; }
 
@@ -470,7 +470,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 }
 .chapters-head--tools {
   justify-content: flex-end;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 /* view switch — the section's data-view attribute is the single source of truth;
@@ -503,7 +503,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 /* shared chapter anatomy: media (one or more slides) + text */
 .chapter {
   position: relative;
-  margin-bottom: clamp(5rem, 11vw, 11rem);
+  margin-bottom: clamp(2rem, 4.5vw, 4rem);
 }
 .chapter:last-child { margin-bottom: 0; }
 
@@ -701,7 +701,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   align-items: start;
 }
 
-.studio-copy { padding-top: clamp(0rem, 5vw, 5rem); }
+.studio-copy { padding-top: clamp(0rem, 3vw, 2.5rem); }
 
 .studio-copy h2 {
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
@@ -729,7 +729,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   display: grid;
   grid-template-columns: 4rem minmax(0, 22rem) minmax(0, 1fr);
   gap: 1rem clamp(1.5rem, 4vw, 4rem);
-  padding: clamp(1.75rem, 4vw, 2.75rem) 0;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0;
   border-bottom: 1px solid var(--line);
   align-items: baseline;
 }
@@ -759,7 +759,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   display: grid;
   grid-template-columns: 8rem minmax(0, 1fr);
   gap: 1rem clamp(1.5rem, 4vw, 3.5rem);
-  padding: clamp(1.5rem, 3.5vw, 2.5rem) 0;
+  padding: clamp(1.1rem, 2.5vw, 1.6rem) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -807,7 +807,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: clamp(2rem, 5vw, 4rem);
   border-top: 1px solid var(--line);
-  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(1.75rem, 3.5vw, 2.5rem);
 }
 
 .contact-block .field-label {
@@ -828,7 +828,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 /* ------------------------------------------------------------------ footer */
 
 .site-footer {
-  padding: clamp(3.5rem, 7vw, 6rem) 0 2.5rem;
+  padding: clamp(2.5rem, 4.5vw, 4rem) 0 2rem;
   border-top: 1px solid var(--line);
 }
 
@@ -837,7 +837,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2.5rem;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .footer-brand {
@@ -883,7 +883,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 .page-main { padding-top: var(--header-height); }
 
 .page-heading {
-  padding: clamp(4rem, 9vw, 9rem) 0 clamp(3rem, 7vw, 7rem);
+  padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(2rem, 4.5vw, 4rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -898,9 +898,9 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   isolation: isolate;
   display: grid;
   align-items: end;
-  min-height: min(72svh, 46rem);
+  min-height: min(62svh, 40rem);
   margin-top: calc(var(--header-height) * -1);
-  padding: calc(var(--header-height) + 5rem) 0 clamp(2.5rem, 6vw, 5rem);
+  padding: calc(var(--header-height) + 3rem) 0 clamp(2rem, 4vw, 3.5rem);
   border-bottom: 0;
   color: var(--paper);
 }
@@ -941,7 +941,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 .page-heading--slideshow .slide-nav { top: calc(var(--header-height) + 1rem); right: var(--gutter); bottom: auto; }
 
 .section { padding: var(--section) 0; }
-.section--tight { padding: clamp(3.5rem, 7vw, 7rem) 0; }
+.section--tight { padding: clamp(2.5rem, 4.5vw, 4.5rem) 0; }
 
 .prose p {
   margin: 0 0 1.4rem;
