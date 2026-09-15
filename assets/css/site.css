@@ -20,14 +20,15 @@
 }
 
 :root {
-  --raw: #f4f1ea;          /* raw canvas ground */
-  --paper: #fbf9f4;        /* lifted panels */
-  --selvage: #e5dfd3;      /* rules, fills */
+  --raw: #fbf6ec;          /* raw canvas ground — brighter, sunlit */
+  --paper: #fffdf8;        /* lifted panels */
+  --selvage: #eee5d5;      /* rules, fills */
   --ink: #1b1c1e;
   --ink-soft: #4d4f53;
   --indigo: #2f3f5c;       /* denim */
   --rinse: #6d7c93;        /* washed denim */
   --rust: #8a4b32;         /* rivet copper — accent */
+  --orange: #bf4e16;       /* contact block — the one loud field on the site */
   --line: rgba(27, 28, 30, .16);
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -58,7 +59,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--raw);
+  background:
+    radial-gradient(70rem 48rem at 6% -12%, rgba(191, 78, 22, .16), transparent 62%),
+    radial-gradient(56rem 40rem at 104% 4%, rgba(109, 124, 147, .22), transparent 62%),
+    radial-gradient(48rem 32rem at 50% 42rem, rgba(255, 214, 150, .18), transparent 65%),
+    var(--raw);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1rem;
@@ -232,6 +237,16 @@ p { text-wrap: pretty; }
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 var(--line);
 }
+
+/* over a photograph (home hero, work heading) the header runs in paper until the
+   page scrolls and the solid bar comes in; the open mobile menu is always on raw */
+.site-header--over:not(.is-scrolled) { color: var(--paper); }
+.site-header--over:not(.is-scrolled) .brand span { color: var(--paper); opacity: .78; }
+.site-header--over:not(.is-scrolled) .menu-toggle span,
+.site-header--over:not(.is-scrolled) .menu-toggle::before,
+.site-header--over:not(.is-scrolled) .menu-toggle::after { background: currentColor; }
+.site-header--over:not(.is-scrolled) .primary-nav.is-open { color: var(--ink); }
+body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 
 .header-inner {
   width: min(100% - (var(--gutter) * 2), 86rem);
@@ -768,7 +783,7 @@ p { text-wrap: pretty; }
 
 .contact-cta {
   padding: var(--section) 0;
-  background: var(--indigo);
+  background: var(--orange);
   color: var(--paper);
 }
 .contact-cta .eyebrow { color: color-mix(in srgb, var(--paper) 72%, transparent); }
@@ -785,7 +800,7 @@ p { text-wrap: pretty; }
 }
 
 .contact-cta .button { border-color: var(--paper); }
-.contact-cta .button:hover { background: var(--paper); color: var(--indigo); }
+.contact-cta .button:hover { background: var(--paper); color: var(--orange); }
 
 .contact-grid {
   display: grid;
@@ -876,6 +891,54 @@ p { text-wrap: pretty; }
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(3rem, 9vw, 9rem);
 }
+
+/* page heading as a full-bleed slideshow — same slide machinery as the chapters */
+.page-heading--slideshow {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: min(72svh, 46rem);
+  margin-top: calc(var(--header-height) * -1);
+  padding: calc(var(--header-height) + 5rem) 0 clamp(2.5rem, 6vw, 5rem);
+  border-bottom: 0;
+  color: var(--paper);
+}
+.page-heading--slideshow .chapter-media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 0;
+  box-shadow: none;
+}
+.page-heading--slideshow .chapter-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top,
+    rgba(27, 28, 30, .86) 0%,
+    rgba(27, 28, 30, .42) 50%,
+    rgba(27, 28, 30, .18) 100%);
+}
+.page-heading--slideshow .slide {
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s var(--ease);
+}
+.page-heading--slideshow .slide.is-active { opacity: 1; }
+.page-heading--slideshow .slide picture,
+.page-heading--slideshow .slide img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+.page-heading--slideshow .eyebrow { color: var(--paper); opacity: .82; }
+.page-heading--slideshow .lede { color: rgba(251, 249, 244, .86); }
+.page-heading--slideshow .slide-note { top: auto; bottom: 1.35rem; right: var(--gutter); }
+.page-heading--slideshow .slide-nav { top: calc(var(--header-height) + 1rem); right: var(--gutter); bottom: auto; }
 
 .section { padding: var(--section) 0; }
 .section--tight { padding: clamp(3.5rem, 7vw, 7rem) 0; }
@@ -990,6 +1053,18 @@ p { text-wrap: pretty; }
   html { font-size: 13px; }
 
   body { background: var(--raw); }
+
+  .page-heading--slideshow {
+    display: block;
+    min-height: 0;
+    margin-top: 0;
+    padding: 2rem 0;
+    color: inherit;
+    border-bottom: 1px solid var(--line);
+  }
+  .page-heading--slideshow .chapter-media { display: none; }
+  .page-heading--slideshow .eyebrow { color: var(--rust); }
+  .page-heading--slideshow .lede { color: var(--ink-soft); }
 
   /* chapters print in the detailed layout whatever view was chosen on screen */
   .view-switch,
@@ -1128,11 +1203,14 @@ p { text-wrap: pretty; }
 }
 
 /* chapter text over a slideshow frame — same treatment as the hero */
+.page-heading--slideshow h1,
 .chapters[data-view="slideshow"] .chapter-caption h3 {
   text-shadow:
     0 2px 30px rgba(0, 0, 0, .38),
     0 1px 4px rgba(0, 0, 0, .22);
 }
+.page-heading--slideshow .eyebrow,
+.page-heading--slideshow .lede,
 .chapters[data-view="slideshow"] .chapter-caption .meta,
 .chapters[data-view="slideshow"] .chapter-body {
   text-shadow:

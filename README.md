@@ -39,7 +39,8 @@ the section head sets it (remembered in `localStorage` as `chapters-view`):
 | `list` | Compact index rows with a thumbnail and the first paragraph. |
 
 Adding a mode is one CSS block keyed on `.chapters[data-view="…"]` plus a button in the
-switch. Print always uses the detailed layout. To give a chapter another frame, add a
+switch. Print always uses the detailed layout. The work page's heading is the same slide
+machinery run full-bleed (`.page-heading--slideshow`), cycling one frame from each chapter. To give a chapter another frame, add a
 slot to `tools/build-images.py`, drop a placeholder `<div class="slot" data-slot="Slide —
 key">` inside a new `<figure class="slide">`, and run the build with `--apply`.
 
@@ -51,13 +52,14 @@ blocks — with a palette shifted toward denim rather than warm interiors.
 
 | Token | Value | Use |
 |---|---|---|
-| `--raw` | `#f4f1ea` | page ground |
-| `--paper` | `#fbf9f4` | lifted panels |
-| `--selvage` | `#e5dfd3` | fills, rules |
+| `--raw` | `#fbf6ec` | page ground, under a soft warm/denim light wash at the top of the page |
+| `--paper` | `#fffdf8` | lifted panels |
+| `--selvage` | `#eee5d5` | fills, rules |
 | `--ink` | `#1b1c1e` | body text |
-| `--indigo` | `#2f3f5c` | denim — contact block |
+| `--indigo` | `#2f3f5c` | denim — selection, slot tints |
 | `--rinse` | `#6d7c93` | washed denim |
 | `--rust` | `#8a4b32` | accent — labels, the dot in the wordmark |
+| `--orange` | `#bf4e16` | contact block |
 
 Type: **Newsreader** (display serif) + **Manrope** (sans).
 

@@ -114,7 +114,7 @@ document.querySelectorAll(".chapter-media").forEach((media) => {
 
   function update() {
     const run = onScreen && !held && !document.hidden && !reduceMotion
-      && section?.dataset.view === "slideshow";
+      && (!section || section.dataset.view === "slideshow");
     if (run && !timer) timer = setInterval(() => show(index + 1), 5200);
     if (!run && timer) { clearInterval(timer); timer = null; }
   }
@@ -128,7 +128,7 @@ document.querySelectorAll(".chapter-media").forEach((media) => {
     update();
   }, { threshold: 0.35 }).observe(media);
 
-  const panel = media.closest(".chapter") || media;
+  const panel = media.closest(".chapter, .page-heading") || media;
   panel.addEventListener("pointerenter", () => { held = true; update(); });
   panel.addEventListener("pointerleave", () => { held = false; update(); });
   panel.addEventListener("focusin", () => { held = true; update(); });
