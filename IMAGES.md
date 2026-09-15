@@ -143,6 +143,24 @@ hero-grade resolution.
 - `desert-ridge-pair.jpg`, `year-of-sweatshirt-desert.jpg`, `bw-hat-trench.jpg`,
   `tony-temple-selfie.jpg` — good images with no slot that fits, or too small.
 
+## Fourth batch — September 2026, product shots
+
+Six files arrived in `assets/images/`; originals kept in
+`_candidates/supplied-2026-09/`, working copies in `_src/` under slide keys. They are
+product photography for three brands the site had not mentioned — **Jumpshot**
+(hoodie, cap, tote), **Pitchers Only** (tour tee, lookbook frame) and **Northstar** (cap)
+— so they run as extra frames in the TonyMagnetic INC chapter slideshow, each captioned
+with the brand name and nothing more. **Confirm with Tony what his role was** (own label,
+design, production?) before the copy says anything about them.
+
+`pitchers-2.jpg` was a web banner with "Gamer Collection / Shop now" baked in; only the
+left third (the model) is used. All six are 600–1600px, so they hold up in the slideshow
+box but are not retina-sharp — camera-roll originals would fix that.
+
+Four more lookbook stills (`dog-038`, `-061`, `-114`, `-134`) now back *The Year of…* as
+slides. Mecca, Munich, Hong Kong, Maximal and Tony Only Tony are still single-frame:
+the remaining candidates are either too small (360px) or their venue is unconfirmed.
+
 ## Turning files into site imagery
 
 Once anything arrives:

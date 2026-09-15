@@ -38,121 +38,238 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section chapters" data-view="slideshow" aria-label="Chapters">
+      <script>try{var v=localStorage.getItem("chapters-view");if(v)document.currentScript.parentNode.dataset.view=v}catch(e){}</script>
       <div class="shell">
+        <div class="chapters-head chapters-head--tools" data-reveal>
+          <div class="view-switch" role="group" aria-label="View chapters as">
+            <button type="button" data-view-choice="slideshow" aria-pressed="true">Slideshow</button>
+            <button type="button" data-view-choice="detailed" aria-pressed="false">Detailed</button>
+            <button type="button" data-view-choice="list" aria-pressed="false">List</button>
+          </div>
+        </div>
 
         <article class="chapter" id="mecca" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/mecca-640.avif 640w, assets/images/mecca-960.avif 960w, assets/images/mecca-1024.avif 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <source type="image/webp" srcset="assets/images/mecca-640.webp 640w, assets/images/mecca-960.webp 960w, assets/images/mecca-1024.webp 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <img src="assets/images/mecca-1024.jpg" srcset="assets/images/mecca-640.jpg 640w, assets/images/mecca-960.jpg 960w, assets/images/mecca-1024.jpg 1024w" sizes="(max-width: 64rem) 100vw, 86rem" width="1024" height="576" alt="Tony Magnetic at the Agenda trade show, New York, 2014" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/mecca-640.avif 640w, assets/images/mecca-960.avif 960w, assets/images/mecca-1024.avif 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/mecca-640.webp 640w, assets/images/mecca-960.webp 960w, assets/images/mecca-1024.webp 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/mecca-1024.jpg" srcset="assets/images/mecca-640.jpg 640w, assets/images/mecca-960.jpg 960w, assets/images/mecca-1024.jpg 1024w" sizes="(max-width: 64rem) 100vw, 86rem" width="1024" height="576" alt="Tony Magnetic at the Agenda trade show, New York, 2014" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Agenda trade show, New York, 2014</figcaption>
+            </figure>
           </div>
-          <p class="image-note">Agenda trade show, New York, 2014</p>
-          <div class="chapter-caption">
-            <h3>Mecca USA</h3>
-            <span class="meta">New York · 1995</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>Mecca USA</h3>
+              <span class="meta">New York · 1995</span>
+            </div>
+            <p class="chapter-body">In the summer of 1995 Tony moved to New York City to launch Mecca USA with Tony Shellman and Lando Felix. Mecca arrived just as American streetwear was turning from a scene into an industry — jeans, tees, jackets and logo knits that dressed a generation and became one of the reference points for the whole category.</p>
+            <p class="chapter-body">That summer also carried a smaller, more particular story: candy-coloured suede New Balance imported from Europe, landing on a New York that had never seen them in those colourways. A footnote, and a lesson about what happens when you move product across a border before the market asks for it.</p>
           </div>
-          <p class="chapter-body">In the summer of 1995 Tony moved to New York City to launch Mecca USA with Tony Shellman and Lando Felix. Mecca arrived just as American streetwear was turning from a scene into an industry — jeans, tees, jackets and logo knits that dressed a generation and became one of the reference points for the whole category.</p>
-          <p class="chapter-body">That summer also carried a smaller, more particular story: candy-coloured suede New Balance imported from Europe, landing on a New York that had never seen them in those colourways. A footnote, and a lesson about what happens when you move product across a border before the market asks for it.</p>
         </article>
 
         <article class="chapter chapter--offset chapter--offset-right" id="munich" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/munich-640.avif 640w, assets/images/munich-960.avif 960w, assets/images/munich-1440.avif 1440w, assets/images/munich-1920.avif 1920w, assets/images/munich-2560.avif 2560w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <source type="image/webp" srcset="assets/images/munich-640.webp 640w, assets/images/munich-960.webp 960w, assets/images/munich-1440.webp 1440w, assets/images/munich-1920.webp 1920w, assets/images/munich-2560.webp 2560w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <img src="assets/images/munich-2560.jpg" srcset="assets/images/munich-640.jpg 640w, assets/images/munich-960.jpg 960w, assets/images/munich-1440.jpg 1440w, assets/images/munich-1920.jpg 1920w, assets/images/munich-2560.jpg 2560w" sizes="(max-width: 64rem) 100vw, 62rem" width="2560" height="3200" alt="Marienplatz, Munich" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/munich-640.avif 640w, assets/images/munich-960.avif 960w, assets/images/munich-1440.avif 1440w, assets/images/munich-1920.avif 1920w, assets/images/munich-2560.avif 2560w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/munich-640.webp 640w, assets/images/munich-960.webp 960w, assets/images/munich-1440.webp 1440w, assets/images/munich-1920.webp 1920w, assets/images/munich-2560.webp 2560w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/munich-2560.jpg" srcset="assets/images/munich-640.jpg 640w, assets/images/munich-960.jpg 960w, assets/images/munich-1440.jpg 1440w, assets/images/munich-1920.jpg 1920w, assets/images/munich-2560.jpg 2560w" sizes="(max-width: 64rem) 100vw, 86rem" width="2560" height="3200" alt="Marienplatz, Munich" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Marienplatz, Munich, 2015</figcaption>
+            </figure>
           </div>
-          <p class="image-note">Marienplatz, Munich, 2015</p>
-          <div class="chapter-caption">
-            <h3>Munich</h3>
-            <span class="meta">Germany · Retail platform</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>Munich</h3>
+              <span class="meta">Germany · Retail platform</span>
+            </div>
+            <p class="chapter-body">A retail platform in Munich, built to bring American street product into a European market on its own terms. Running a shop floor is a different education from running a label: you find out in real time which pieces people pick up, which they put back, and why.</p>
           </div>
-          <p class="chapter-body">A retail platform in Munich, built to bring American street product into a European market on its own terms. Running a shop floor is a different education from running a label: you find out in real time which pieces people pick up, which they put back, and why.</p>
         </article>
 
         <article class="chapter chapter--offset" id="the-year-of" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/year-of-640.avif 640w, assets/images/year-of-960.avif 960w, assets/images/year-of-1440.avif 1440w, assets/images/year-of-1920.avif 1920w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <source type="image/webp" srcset="assets/images/year-of-640.webp 640w, assets/images/year-of-960.webp 960w, assets/images/year-of-1440.webp 1440w, assets/images/year-of-1920.webp 1920w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <img src="assets/images/year-of-1920.jpg" srcset="assets/images/year-of-640.jpg 640w, assets/images/year-of-960.jpg 960w, assets/images/year-of-1440.jpg 1440w, assets/images/year-of-1920.jpg 1920w" sizes="(max-width: 64rem) 100vw, 62rem" width="1920" height="1280" alt="Gold and silver selfedge on The Year of… denim" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/year-of-640.avif 640w, assets/images/year-of-960.avif 960w, assets/images/year-of-1440.avif 1440w, assets/images/year-of-1920.avif 1920w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/year-of-640.webp 640w, assets/images/year-of-960.webp 960w, assets/images/year-of-1440.webp 1440w, assets/images/year-of-1920.webp 1920w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/year-of-1920.jpg" srcset="assets/images/year-of-640.jpg 640w, assets/images/year-of-960.jpg 960w, assets/images/year-of-1440.jpg 1440w, assets/images/year-of-1920.jpg 1920w" sizes="(max-width: 64rem) 100vw, 86rem" width="1920" height="1280" alt="Gold and silver selfedge on The Year of… denim" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">The Year of… Vol IV, 2006</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/year-of-embroidery-640.avif 640w, assets/images/year-of-embroidery-960.avif 960w, assets/images/year-of-embroidery-1440.avif 1440w, assets/images/year-of-embroidery-1920.avif 1920w, assets/images/year-of-embroidery-2370.avif 2370w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/year-of-embroidery-640.webp 640w, assets/images/year-of-embroidery-960.webp 960w, assets/images/year-of-embroidery-1440.webp 1440w, assets/images/year-of-embroidery-1920.webp 1920w, assets/images/year-of-embroidery-2370.webp 2370w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/year-of-embroidery-2370.jpg" srcset="assets/images/year-of-embroidery-640.jpg 640w, assets/images/year-of-embroidery-960.jpg 960w, assets/images/year-of-embroidery-1440.jpg 1440w, assets/images/year-of-embroidery-1920.jpg 1920w, assets/images/year-of-embroidery-2370.jpg 2370w" sizes="(max-width: 64rem) 100vw, 86rem" width="2370" height="1580" alt="White foliate embroidery across the back pocket of The Year of… jeans" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">The Year of… Vol IV, 2006</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/year-of-patch-640.avif 640w, assets/images/year-of-patch-960.avif 960w, assets/images/year-of-patch-1440.avif 1440w, assets/images/year-of-patch-1787.avif 1787w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/year-of-patch-640.webp 640w, assets/images/year-of-patch-960.webp 960w, assets/images/year-of-patch-1440.webp 1440w, assets/images/year-of-patch-1787.webp 1787w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/year-of-patch-1787.jpg" srcset="assets/images/year-of-patch-640.jpg 640w, assets/images/year-of-patch-960.jpg 960w, assets/images/year-of-patch-1440.jpg 1440w, assets/images/year-of-patch-1787.jpg 1787w" sizes="(max-width: 64rem) 100vw, 86rem" width="1787" height="1191" alt="The Year of… leather patch, Year of the Dog, on raw selvage denim" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">The Year of… Vol IV, 2006</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/year-of-cans-640.avif 640w, assets/images/year-of-cans-960.avif 960w, assets/images/year-of-cans-1440.avif 1440w, assets/images/year-of-cans-1774.avif 1774w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/year-of-cans-640.webp 640w, assets/images/year-of-cans-960.webp 960w, assets/images/year-of-cans-1440.webp 1440w, assets/images/year-of-cans-1774.webp 1774w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/year-of-cans-1774.jpg" srcset="assets/images/year-of-cans-640.jpg 640w, assets/images/year-of-cans-960.jpg 960w, assets/images/year-of-cans-1440.jpg 1440w, assets/images/year-of-cans-1774.jpg 1774w" sizes="(max-width: 64rem) 100vw, 86rem" width="1774" height="1183" alt="The Year of… flame-embroidered jeans, shot against gold cans, 2006" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">The Year of… Vol IV, 2006</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/year-of-pocket-640.avif 640w, assets/images/year-of-pocket-960.avif 960w, assets/images/year-of-pocket-1440.avif 1440w, assets/images/year-of-pocket-1920.avif 1920w, assets/images/year-of-pocket-2448.avif 2448w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/year-of-pocket-640.webp 640w, assets/images/year-of-pocket-960.webp 960w, assets/images/year-of-pocket-1440.webp 1440w, assets/images/year-of-pocket-1920.webp 1920w, assets/images/year-of-pocket-2448.webp 2448w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/year-of-pocket-2448.jpg" srcset="assets/images/year-of-pocket-640.jpg 640w, assets/images/year-of-pocket-960.jpg 960w, assets/images/year-of-pocket-1440.jpg 1440w, assets/images/year-of-pocket-1920.jpg 1920w, assets/images/year-of-pocket-2448.jpg 2448w" sizes="(max-width: 64rem) 100vw, 86rem" width="2448" height="1632" alt="Folded pair of The Year of… jeans with gold-embroidered pocket" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">The Year of… Vol IV, 2006</figcaption>
+            </figure>
           </div>
-          <div class="chapter-caption">
-            <h3>The Year of…</h3>
-            <span class="meta">Denim · Profiled 2007</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>The Year of…</h3>
+              <span class="meta">Denim · Profiled 2007</span>
+            </div>
+            <p class="chapter-body">A denim brand set against a deliberately difficult brief, described in the South China Morning Post in 2007: <em>“I wanted to create a product that could sit next to Gucci or Comme des Garcons, yet not use the haute couture concept.”</em></p>
+            <p class="chapter-body">In practice that meant holding the construction standard of a luxury house while refusing the pricing theatre and the exclusivity that normally comes attached to it — a premium object without the velvet rope.</p>
           </div>
-          <p class="chapter-body">A denim brand set against a deliberately difficult brief, described in the South China Morning Post in 2007: <em>“I wanted to create a product that could sit next to Gucci or Comme des Garcons, yet not use the haute couture concept.”</em></p>
-          <p class="chapter-body">In practice that meant holding the construction standard of a luxury house while refusing the pricing theatre and the exclusivity that normally comes attached to it — a premium object without the velvet rope.</p>
         </article>
 
         <article class="chapter" id="hong-kong" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/hongkong-640.avif 640w, assets/images/hongkong-960.avif 960w, assets/images/hongkong-987.avif 987w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <source type="image/webp" srcset="assets/images/hongkong-640.webp 640w, assets/images/hongkong-960.webp 960w, assets/images/hongkong-987.webp 987w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <img src="assets/images/hongkong-987.jpg" srcset="assets/images/hongkong-640.jpg 640w, assets/images/hongkong-960.jpg 960w, assets/images/hongkong-987.jpg 987w" sizes="(max-width: 64rem) 100vw, 86rem" width="987" height="555" alt="A Hong Kong street, photographed for The Year of…" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/hongkong-640.avif 640w, assets/images/hongkong-960.avif 960w, assets/images/hongkong-987.avif 987w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/hongkong-640.webp 640w, assets/images/hongkong-960.webp 960w, assets/images/hongkong-987.webp 987w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/hongkong-987.jpg" srcset="assets/images/hongkong-640.jpg 640w, assets/images/hongkong-960.jpg 960w, assets/images/hongkong-987.jpg 987w" sizes="(max-width: 64rem) 100vw, 86rem" width="987" height="555" alt="A Hong Kong street, photographed for The Year of…" loading="lazy" decoding="async">
+              </picture>
+            </figure>
           </div>
-          <div class="chapter-caption">
-            <h3>Hong Kong</h3>
-            <span class="meta">2006 — 2008</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>Hong Kong</h3>
+              <span class="meta">2006 — 2008</span>
+            </div>
+            <p class="chapter-body">The Year of… ran its middle volumes out of Hong Kong, and the city turns up all through the catalogues — shot on the tenement streets, in the markets, under the neon. The 2008 edition is titled outright: <em>Hong Kong to Hollywood</em>.</p>
+            <p class="chapter-body">It also produced the collaboration he seems proudest of. He met Mak Yami, coach of the Hong Kong Fiery Dragons, then reigning world champions, and a descendant of the man he calls the godfather of modern lion dance. Yami ran his own label, Milk Six. Tony had watched the first hip-hop choreographed lion dance in the city, in the Year of the Dog, and the two of them put out the Fiery Dragon jean with a knitwear range behind it. His sign-off in the catalogue: <em>Enter the Dragon!</em></p>
           </div>
-          <p class="chapter-body">The Year of… ran its middle volumes out of Hong Kong, and the city turns up all through the catalogues — shot on the tenement streets, in the markets, under the neon. The 2008 edition is titled outright: <em>Hong Kong to Hollywood</em>.</p>
-          <p class="chapter-body">It also produced the collaboration he seems proudest of. He met Mak Yami, coach of the Hong Kong Fiery Dragons, then reigning world champions, and a descendant of the man he calls the godfather of modern lion dance. Yami ran his own label, Milk Six. Tony had watched the first hip-hop choreographed lion dance in the city, in the Year of the Dog, and the two of them put out the Fiery Dragon jean with a knitwear range behind it. His sign-off in the catalogue: <em>Enter the Dragon!</em></p>
         </article>
 
         <article class="chapter chapter--offset chapter--offset-right" id="maximal-concepts" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/maximal-640.avif 640w, assets/images/maximal-960.avif 960w, assets/images/maximal-1173.avif 1173w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <source type="image/webp" srcset="assets/images/maximal-640.webp 640w, assets/images/maximal-960.webp 960w, assets/images/maximal-1173.webp 1173w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <img src="assets/images/maximal-1173.jpg" srcset="assets/images/maximal-640.jpg 640w, assets/images/maximal-960.jpg 960w, assets/images/maximal-1173.jpg 1173w" sizes="(max-width: 64rem) 100vw, 62rem" width="1173" height="782" alt="Hong Kong at night" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/maximal-640.avif 640w, assets/images/maximal-960.avif 960w, assets/images/maximal-1173.avif 1173w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/maximal-640.webp 640w, assets/images/maximal-960.webp 960w, assets/images/maximal-1173.webp 1173w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/maximal-1173.jpg" srcset="assets/images/maximal-640.jpg 640w, assets/images/maximal-960.jpg 960w, assets/images/maximal-1173.jpg 1173w" sizes="(max-width: 64rem) 100vw, 86rem" width="1173" height="782" alt="Hong Kong at night" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Hong Kong at night, photographed for The Year of…</figcaption>
+            </figure>
           </div>
-          <p class="image-note">Hong Kong at night, photographed for The Year of…</p>
-          <div class="chapter-caption">
-            <h3>Maximal Concepts</h3>
-            <span class="meta">Hong Kong · Hospitality</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>Maximal Concepts</h3>
+              <span class="meta">Hong Kong · Hospitality</span>
+            </div>
+            <!-- TODO: replace with Tony's actual role and dates. Nothing in the public record
+            connects him to Maximal Concepts, so this must come from him directly. -->
+            <p class="chapter-body">Maximal Concepts is the Hong Kong hospitality group behind Mott 32, Blue Butcher and Brickhouse, founded in 2011. Food and drink have run alongside the clothes for years — his own description of the work puts brand building across fashion, food and beverage in the same sentence.</p>
           </div>
-          <!-- TODO: replace with Tony's actual role and dates. Nothing in the public record
-               connects him to Maximal Concepts, so this must come from him directly. -->
-          <p class="chapter-body">Maximal Concepts is the Hong Kong hospitality group behind Mott 32, Blue Butcher and Brickhouse, founded in 2011. Food and drink have run alongside the clothes for years — his own description of the work puts brand building across fashion, food and beverage in the same sentence.</p>
         </article>
 
         <article class="chapter chapter--offset chapter--offset-right" id="tony-only-tony" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/tony-only-tony-360.avif 360w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <source type="image/webp" srcset="assets/images/tony-only-tony-360.webp 360w" sizes="(max-width: 64rem) 100vw, 62rem">
-              <img src="assets/images/tony-only-tony-360.jpg" srcset="assets/images/tony-only-tony-360.jpg 360w" sizes="(max-width: 64rem) 100vw, 62rem" width="360" height="450" alt="Tony Only Tony garment" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/tony-only-tony-360.avif 360w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/tony-only-tony-360.webp 360w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/tony-only-tony-360.jpg" srcset="assets/images/tony-only-tony-360.jpg 360w" sizes="(max-width: 64rem) 100vw, 86rem" width="360" height="450" alt="Tony Only Tony garment" loading="lazy" decoding="async">
+              </picture>
+            </figure>
           </div>
-          <div class="chapter-caption">
-            <h3>Tony Only Tony</h3>
-            <span class="meta">Own label</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>Tony Only Tony</h3>
+              <span class="meta">Own label</span>
+            </div>
+            <p class="chapter-body">A personal label — the point where the taste stops being applied to somebody else's brand and simply becomes the product. Fewer rooms to convince, and nowhere to hide.</p>
           </div>
-          <p class="chapter-body">A personal label — the point where the taste stops being applied to somebody else's brand and simply becomes the product. Fewer rooms to convince, and nowhere to hide.</p>
         </article>
 
         <article class="chapter" id="tonymagnetic" data-reveal>
-          <div class="chapter-image">
-            <picture>
-              <source type="image/avif" srcset="assets/images/tonymagnetic-640.avif 640w, assets/images/tonymagnetic-886.avif 886w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <source type="image/webp" srcset="assets/images/tonymagnetic-640.webp 640w, assets/images/tonymagnetic-886.webp 886w" sizes="(max-width: 64rem) 100vw, 86rem">
-              <img src="assets/images/tonymagnetic-886.jpg" srcset="assets/images/tonymagnetic-640.jpg 640w, assets/images/tonymagnetic-886.jpg 886w" sizes="(max-width: 64rem) 100vw, 86rem" width="886" height="498" alt="TonyMagnetic INC collection" loading="lazy" decoding="async">
-            </picture>
+          <div class="chapter-media">
+            <figure class="slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/images/tonymagnetic-640.avif 640w, assets/images/tonymagnetic-886.avif 886w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/tonymagnetic-640.webp 640w, assets/images/tonymagnetic-886.webp 886w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/tonymagnetic-886.jpg" srcset="assets/images/tonymagnetic-640.jpg 640w, assets/images/tonymagnetic-886.jpg 886w" sizes="(max-width: 64rem) 100vw, 86rem" width="886" height="498" alt="TonyMagnetic INC collection" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/pitchers-only-lookbook-600.avif 600w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/pitchers-only-lookbook-600.webp 600w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/pitchers-only-lookbook-600.jpg" srcset="assets/images/pitchers-only-lookbook-600.jpg 600w" sizes="(max-width: 64rem) 100vw, 86rem" width="600" height="400" alt="Pitchers Only Shove Day tee, worn with a catcher's mitt" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Pitchers Only</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/jumpshot-hoodie-640.avif 640w, assets/images/jumpshot-hoodie-960.avif 960w, assets/images/jumpshot-hoodie-1024.avif 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/jumpshot-hoodie-640.webp 640w, assets/images/jumpshot-hoodie-960.webp 960w, assets/images/jumpshot-hoodie-1024.webp 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/jumpshot-hoodie-1024.jpg" srcset="assets/images/jumpshot-hoodie-640.jpg 640w, assets/images/jumpshot-hoodie-960.jpg 960w, assets/images/jumpshot-hoodie-1024.jpg 1024w" sizes="(max-width: 64rem) 100vw, 86rem" width="1024" height="683" alt="Jumpshot hoodie, front and back, washed black with arched logo and Call Game script" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Jumpshot</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/pitchers-only-tee-640.avif 640w, assets/images/pitchers-only-tee-960.avif 960w, assets/images/pitchers-only-tee-1000.avif 1000w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/pitchers-only-tee-640.webp 640w, assets/images/pitchers-only-tee-960.webp 960w, assets/images/pitchers-only-tee-1000.webp 1000w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/pitchers-only-tee-1000.jpg" srcset="assets/images/pitchers-only-tee-640.jpg 640w, assets/images/pitchers-only-tee-960.jpg 960w, assets/images/pitchers-only-tee-1000.jpg 1000w" sizes="(max-width: 64rem) 100vw, 86rem" width="1000" height="667" alt="Pitchers Only Electrix Tour 2026 tee, acid-washed grey" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Pitchers Only</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/jumpshot-cap-640.avif 640w, assets/images/jumpshot-cap-960.avif 960w, assets/images/jumpshot-cap-1024.avif 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/jumpshot-cap-640.webp 640w, assets/images/jumpshot-cap-960.webp 960w, assets/images/jumpshot-cap-1024.webp 1024w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/jumpshot-cap-1024.jpg" srcset="assets/images/jumpshot-cap-640.jpg 640w, assets/images/jumpshot-cap-960.jpg 960w, assets/images/jumpshot-cap-1024.jpg 1024w" sizes="(max-width: 64rem) 100vw, 86rem" width="1024" height="683" alt="Jumpshot washed cotton cap with outlined arch logo" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Jumpshot</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/northstar-cap-600.avif 600w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/northstar-cap-600.webp 600w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/northstar-cap-600.jpg" srcset="assets/images/northstar-cap-600.jpg 600w" sizes="(max-width: 64rem) 100vw, 86rem" width="600" height="400" alt="Northstar navy cap with embroidered star emblem" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Northstar</figcaption>
+            </figure>
+            <figure class="slide">
+              <picture>
+                <source type="image/avif" srcset="assets/images/jumpshot-tote-640.avif 640w, assets/images/jumpshot-tote-934.avif 934w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <source type="image/webp" srcset="assets/images/jumpshot-tote-640.webp 640w, assets/images/jumpshot-tote-934.webp 934w" sizes="(max-width: 64rem) 100vw, 86rem">
+                <img src="assets/images/jumpshot-tote-934.jpg" srcset="assets/images/jumpshot-tote-640.jpg 640w, assets/images/jumpshot-tote-934.jpg 934w" sizes="(max-width: 64rem) 100vw, 86rem" width="934" height="623" alt="Jumpshot canvas tote, Call Game print" loading="lazy" decoding="async">
+              </picture>
+              <figcaption class="slide-note">Jumpshot</figcaption>
+            </figure>
           </div>
-          <div class="chapter-caption">
-            <h3>TonyMagnetic INC</h3>
-            <span class="meta">2002 — present</span>
+          <div class="chapter-text">
+            <div class="chapter-caption">
+              <h3>TonyMagnetic INC</h3>
+              <span class="meta">2002 — present</span>
+            </div>
+            <p class="chapter-body">The house itself, carrying its own trademark since 2002 — every volume of <em>The Year of…</em> was published under it — and registered again in the United States in 2019 across the full apparel range: tops and bottoms, tees, pants and shorts, sweatshirts and hoodies, shirts and jackets, headwear and footwear.</p>
+            <p class="chapter-body">Based in Ho Chi Minh City — close enough to the mills and factories that a sample is a morning's work, and thirty years of knowing what a garment should cost to make properly.</p>
           </div>
-          <p class="chapter-body">The house itself, carrying its own trademark since 2002 — every volume of <em>The Year of…</em> was published under it — and registered again in the United States in 2019 across the full apparel range: tops and bottoms, tees, pants and shorts, sweatshirts and hoodies, shirts and jackets, headwear and footwear.</p>
-          <p class="chapter-body">Based in Ho Chi Minh City — close enough to the mills and factories that a sample is a morning's work, and thirty years of knowing what a garment should cost to make properly.</p>
         </article>
 
       </div>

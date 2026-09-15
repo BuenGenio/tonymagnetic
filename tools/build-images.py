@@ -79,6 +79,58 @@ SLOTS = {
         alt="Tony Magnetic",
         match=["Portrait — Tony, present day"],
     ),
+    # Extra slides for the chapter slideshows. All 3:2 — the slideshow box is
+    # 16:10 on desktop and 4:5 on phones, and object-fit does the rest.
+    "year-of-embroidery": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="White foliate embroidery across the back pocket of The Year of… jeans",
+        match=["Slide — year-of-embroidery"],
+    ),
+    "year-of-patch": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="The Year of… leather patch, Year of the Dog, on raw selvage denim",
+        match=["Slide — year-of-patch"],
+    ),
+    "year-of-cans": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="The Year of… flame-embroidered jeans, shot against gold cans, 2006",
+        match=["Slide — year-of-cans"],
+    ),
+    "year-of-pocket": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Folded pair of The Year of… jeans with gold-embroidered pocket",
+        match=["Slide — year-of-pocket"],
+    ),
+    "pitchers-only-lookbook": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Pitchers Only Shove Day tee, worn with a catcher's mitt",
+        match=["Slide — pitchers-only-lookbook"],
+    ),
+    "jumpshot-hoodie": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Jumpshot hoodie, front and back, washed black with arched logo and Call Game script",
+        match=["Slide — jumpshot-hoodie"],
+    ),
+    "pitchers-only-tee": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Pitchers Only Electrix Tour 2026 tee, acid-washed grey",
+        match=["Slide — pitchers-only-tee"],
+    ),
+    "jumpshot-cap": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Jumpshot washed cotton cap with outlined arch logo",
+        match=["Slide — jumpshot-cap"],
+    ),
+    "northstar-cap": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Northstar navy cap with embroidered star emblem",
+        match=["Slide — northstar-cap"],
+    ),
+    "jumpshot-tote": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Jumpshot canvas tote, Call Game print",
+        match=["Slide — jumpshot-tote"],
+    ),
 }
 
 PAGES = ["index.html", "work.html", "about.html", "contact.html"]

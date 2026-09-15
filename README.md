@@ -11,18 +11,37 @@ python3 -m http.server 4321 --directory .
 
 ```
 index.html      Home — hero, quote, chapters, bio intro, approach, contact CTA
-work.html       The five chapters, long-form (anchors: #mecca #munich #the-year-of
-                #tony-only-tony #tonymagnetic)
+work.html       The seven chapters, long-form (anchors: #mecca #munich #the-year-of
+                #hong-kong #maximal-concepts #tony-only-tony #tonymagnetic)
 about.html      Full bio, timeline, personal notes
 contact.html    Contact details and what he takes on
 assets/css/site.css
-assets/js/site.js       Mobile menu, sticky header, scroll reveals
+assets/js/site.js       Mobile menu, sticky header, scroll reveals, chapter slideshows
+                        and the chapters view switch
 assets/fonts/           Newsreader + Manrope (latin subsets, self-hosted)
 assets/images/          Generated derivatives (empty until you build)
 assets/images/_src/     Put original photos here, named by slot key
 tools/build-images.py   Crops, resizes, encodes AVIF/WebP/JPEG, rewrites the HTML
 IMAGES.md               Shot list, sourcing routes, rights notes
 ```
+
+## Chapters: one markup, three views
+
+Every chapter on the home and work pages is the same block — a `.chapter-media` holding
+one or more `<figure class="slide">` frames, then a `.chapter-text` with the caption and
+copy. The section's `data-view` attribute picks how that renders, and the pill switch in
+the section head sets it (remembered in `localStorage` as `chapters-view`):
+
+| Mode | What it does |
+|---|---|
+| `slideshow` (default) | Full-width panel, frames cross-fade under the text. Auto-advances every ~5s only while on screen, pauses on hover/focus, never under `prefers-reduced-motion`. |
+| `detailed` | The editorial layout — one frame, caption below, offset blocks. Dots still let you flick through the frames. |
+| `list` | Compact index rows with a thumbnail and the first paragraph. |
+
+Adding a mode is one CSS block keyed on `.chapters[data-view="…"]` plus a button in the
+switch. Print always uses the detailed layout. To give a chapter another frame, add a
+slot to `tools/build-images.py`, drop a placeholder `<div class="slot" data-slot="Slide —
+key">` inside a new `<figure class="slide">`, and run the build with `--apply`.
 
 ## Design
 
