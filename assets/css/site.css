@@ -602,7 +602,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 /* --- mode: slideshow — frames cross-fade under the text ------------------ */
 .chapters[data-view="slideshow"] .chapter {
   display: grid;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   width: 100%;
   margin-left: 0;
   overflow: clip;                          /* not hidden: a scroll container can't grow to fit its text */
@@ -635,7 +635,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   grid-area: 1 / 1;
   align-self: end;
   z-index: 2;                              /* grid items stack without position */
-  padding: clamp(6rem, 14vw, 12rem) clamp(1.5rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(8rem, 18vw, 16rem) clamp(1.5rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 3.5rem);
   background: linear-gradient(to top,
     rgba(27, 28, 30, .88) 0%,
     rgba(27, 28, 30, .58) 45%,
@@ -899,7 +899,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   isolation: isolate;
   display: grid;
   align-items: end;
-  min-height: min(62svh, 40rem);
+  min-height: min(72svh, 46rem);
   margin-top: calc(var(--header-height) * -1);
   padding: calc(var(--header-height) + 3rem) 0 clamp(2rem, 4vw, 3.5rem);
   border-bottom: 0;
@@ -1014,7 +1014,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   /* on a phone the copy is taller than any sensible frame: let the panel run
      to its text and keep the top ~60vw clear so the photograph still reads */
   .chapters[data-view="slideshow"] .chapter { aspect-ratio: auto; }
-  .chapters[data-view="slideshow"] .chapter-text { padding: 60vw 1.25rem 2rem; }
+  .chapters[data-view="slideshow"] .chapter-text { padding: 92vw 1.25rem 2rem; }
   .chapters[data-view="slideshow"] .chapter-body { font-size: .95rem; }
   .chapters[data-view="slideshow"] .slide-nav { right: auto; bottom: auto; left: 1.1rem; top: 1.1rem; }
   .chapters[data-view="list"] .chapter { grid-template-columns: 4rem minmax(0, 1fr); gap: 1rem; }
