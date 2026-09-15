@@ -35,6 +35,7 @@ the section head sets it (remembered in `localStorage` as `chapters-view`):
 | Mode | What it does |
 |---|---|
 | `slideshow` (default) | Full-width panel, frames cross-fade under the text. Auto-advances every ~5s only while on screen, pauses on hover/focus, never under `prefers-reduced-motion`. |
+| `tiles` | A dense grid of square tiles — the first chapter as a 2×2 feature, the rest single squares — each still cycling its frames, staggered. Title and meta only. |
 | `detailed` | The editorial layout — one frame, caption below, offset blocks. Dots still let you flick through the frames. |
 | `list` | Compact index rows with a thumbnail and the first paragraph. |
 

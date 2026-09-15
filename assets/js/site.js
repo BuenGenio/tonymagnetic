@@ -111,15 +111,22 @@ document.querySelectorAll(".chapter-media").forEach((media) => {
   let timer = null;
   let onScreen = false;
   let held = false;                        // hovered or focused — don't move under the reader
+  const offset = Math.random() * 4000;     // so a grid of tiles doesn't flip in unison
 
+  function stop() {
+    if (timer) { clearTimeout(timer); clearInterval(timer); timer = null; }
+  }
   function update() {
+    const view = section?.dataset.view;
     const run = onScreen && !held && !document.hidden && !reduceMotion
-      && (!section || section.dataset.view === "slideshow");
-    if (run && !timer) timer = setInterval(() => show(index + 1), 5200);
-    if (!run && timer) { clearInterval(timer); timer = null; }
+      && (!section || view === "slideshow" || view === "tiles");
+    if (run && !timer) {
+      timer = setTimeout(() => { show(index + 1); timer = setInterval(() => show(index + 1), 5200); }, offset);
+    }
+    if (!run) stop();
   }
   function restart() {
-    if (timer) { clearInterval(timer); timer = null; }
+    stop();
     update();
   }
 

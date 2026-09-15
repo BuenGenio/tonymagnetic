@@ -616,16 +616,20 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
   border-radius: 0;
   box-shadow: none;
 }
-.chapters[data-view="slideshow"] .slide {
+.chapters[data-view="slideshow"] .slide,
+.chapters[data-view="tiles"] .slide {
   display: block;
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 1.6s var(--ease);
 }
-.chapters[data-view="slideshow"] .slide.is-active { opacity: 1; }
+.chapters[data-view="slideshow"] .slide.is-active,
+.chapters[data-view="tiles"] .slide.is-active { opacity: 1; }
 .chapters[data-view="slideshow"] .slide picture,
-.chapters[data-view="slideshow"] .slide img {
+.chapters[data-view="slideshow"] .slide img,
+.chapters[data-view="tiles"] .slide picture,
+.chapters[data-view="tiles"] .slide img {
   height: 100%;
   object-fit: cover;
   object-position: var(--focus, 50% 50%);  /* per-slide, set inline on the figure when the subject is off-centre */
@@ -652,6 +656,70 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 
 /* --- mode: detailed — the editorial layout: one frame, caption below ------ */
 /* (the shared anatomy above is this mode; nothing to add) */
+
+/* --- mode: tiles — a dense grid of square slideshows ---------------------- */
+/* The first chapter is a 2×2 feature; the rest are single squares. With eight
+   chapters that leaves one hole, so a last tile that lands on a multiple of
+   four goes wide to close the row (five chapters already fill two rows). */
+.chapters[data-view="tiles"] .shell {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: clamp(.6rem, 1.2vw, 1rem);
+}
+.chapters[data-view="tiles"] .chapters-head { grid-column: 1 / -1; }
+.chapters[data-view="tiles"] .chapter {
+  display: grid;
+  aspect-ratio: 1;
+  width: 100%;
+  margin: 0;
+  overflow: clip;
+  border-radius: var(--radius);
+  box-shadow: var(--lift);
+  color: var(--paper);
+}
+.chapters[data-view="tiles"] .chapter:first-of-type { grid-column: span 2; grid-row: span 2; }
+.chapters[data-view="tiles"] .chapter:last-of-type:nth-of-type(4n) { grid-column: span 2; aspect-ratio: 2 / 1; }
+.chapters[data-view="tiles"] .chapter-media {
+  grid-area: 1 / 1;
+  min-height: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.chapters[data-view="tiles"] .chapter-text {
+  grid-area: 1 / 1;
+  align-self: end;
+  z-index: 2;
+  padding: 3.5rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(27, 28, 30, .82) 0%, rgba(27, 28, 30, .4) 55%, rgba(27, 28, 30, 0) 100%);
+  pointer-events: none;
+}
+.chapters[data-view="tiles"] .chapter-text a { pointer-events: auto; }
+.chapters[data-view="tiles"] .chapter-caption {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.chapters[data-view="tiles"] .chapter-caption h3 {
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  color: var(--paper);
+  line-height: 1.1;
+}
+.chapters[data-view="tiles"] .chapter-caption .meta {
+  display: block;
+  margin-top: .4rem;
+  font-size: .58rem;
+  color: rgba(251, 249, 244, .8);
+}
+.chapters[data-view="tiles"] .chapter:first-of-type .chapter-caption h3 { font-size: clamp(1.9rem, 3vw, 3rem); }
+.chapters[data-view="tiles"] .chapter:first-of-type .chapter-caption .meta { font-size: .68rem; }
+.chapters[data-view="tiles"] .chapter:first-of-type .chapter-text { padding: 6rem 1.5rem 1.5rem; }
+.chapters[data-view="tiles"] .chapter-body,
+.chapters[data-view="tiles"] .slide-note,
+.chapters[data-view="tiles"] .slide-nav { display: none; }
+.chapters[data-view="tiles"] .chapter:first-of-type .slide-nav { display: flex; }
+.chapters[data-view="tiles"] .chapter:hover { box-shadow: var(--lift-hover); }
 
 /* --- mode: list — a compact index ---------------------------------------- */
 .chapters[data-view="list"] .chapter {
@@ -1011,6 +1079,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 }
 
 @media (max-width: 40rem) {
+  .chapters[data-view="tiles"] .shell { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   /* on a phone the copy is taller than any sensible frame: let the panel run
      to its text and keep the top ~60vw clear so the photograph still reads */
   .chapters[data-view="slideshow"] .chapter { aspect-ratio: auto; }
@@ -1205,7 +1274,8 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 
 /* chapter text over a slideshow frame — same treatment as the hero */
 .page-heading--slideshow h1,
-.chapters[data-view="slideshow"] .chapter-caption h3 {
+.chapters[data-view="slideshow"] .chapter-caption h3,
+.chapters[data-view="tiles"] .chapter-caption h3 {
   text-shadow:
     0 2px 30px rgba(0, 0, 0, .38),
     0 1px 4px rgba(0, 0, 0, .22);
