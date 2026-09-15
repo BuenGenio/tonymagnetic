@@ -161,6 +161,18 @@ Four more lookbook stills (`dog-038`, `-061`, `-114`, `-134`) now back *The Year
 slides. Mecca, Munich, Hong Kong, Maximal and Tony Only Tony are still single-frame:
 the remaining candidates are either too small (360px) or their venue is unconfirmed.
 
+## Fifth batch — the consolidated folder (`~/Pictures/tonymagnetic`, September 2026)
+
+Fifteen files; six were the product shots above, byte for byte. The nine new ones, filed
+in `_candidates/supplied-2026-09/`:
+
+| Went where | Files | Why |
+|---|---|---|
+| **New chapter: Hamachi Hunters** | `hamachi-tacos-truck`, `hamachi-bus`, `hamachi-festival`, `hamachi-tees` — led by `supplied/sushi-service-3024.jpg`, which finally has a home | A food-truck venture (Seoul food, Tokyo tacos, merch with Bricks & Wood). Not Maximal Concepts, which is Hong Kong hospitality — putting these there would be a false record. The chapter copy states only what the pictures show; **city, years and Tony's role need confirming** (TODO in `work.html`). |
+| *The Year of…* | `teddy-bear` (1600px) | The scarf label reads "The Year of…". Cut 4:3 rather than 3:2 so the bear keeps its head; the slide carries `--focus: 50% 12%` for the slideshow's cover crop. |
+| TonyMagnetic INC | `coconut-buttons` | Hand-cut shell buttons and toggles — the trims side of making. A guess at placement; move it if Tony says otherwise. |
+| Not used | `hamachi-logo` (a flat graphic, not a photograph), `hamachi-kitchen-360`, `hamachi-tony-cooking-360` | Logo would sit oddly under a photo scrim; the two 360px frames go to mush at full width. The cooking shot is worth asking for at camera-roll size. |
+
 ## Turning files into site imagery
 
 Once anything arrives:

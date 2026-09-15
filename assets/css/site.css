@@ -628,6 +628,7 @@ body.menu-open .site-header--over .menu-toggle { color: var(--ink); }
 .chapters[data-view="slideshow"] .slide img {
   height: 100%;
   object-fit: cover;
+  object-position: var(--focus, 50% 50%);  /* per-slide, set inline on the figure when the subject is off-centre */
   border-radius: 0;
 }
 .chapters[data-view="slideshow"] .chapter-text {

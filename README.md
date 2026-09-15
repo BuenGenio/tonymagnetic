@@ -11,8 +11,8 @@ python3 -m http.server 4321 --directory .
 
 ```
 index.html      Home — hero, quote, chapters, bio intro, approach, contact CTA
-work.html       The seven chapters, long-form (anchors: #mecca #munich #the-year-of
-                #hong-kong #maximal-concepts #tony-only-tony #tonymagnetic)
+work.html       The eight chapters, long-form (anchors: #mecca #munich #the-year-of
+                #hong-kong #maximal-concepts #hamachi-hunters #tony-only-tony #tonymagnetic)
 about.html      Full bio, timeline, personal notes
 contact.html    Contact details and what he takes on
 assets/css/site.css

@@ -131,6 +131,41 @@ SLOTS = {
         alt="Jumpshot canvas tote, Call Game print",
         match=["Slide — jumpshot-tote"],
     ),
+    "hamachi-sushi": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Tony shaping nigiri rice on a wooden board, Hamachi Hunters",
+        match=["Slide — hamachi-sushi"],
+    ),
+    "hamachi-tacos-truck": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="The Hamachi Hunters Tokyo Tacos truck, parked under palms",
+        match=["Slide — hamachi-tacos-truck"],
+    ),
+    "hamachi-bus": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="The yellow Hamachi Hunters Seoul Food bus, hatch open",
+        match=["Slide — hamachi-bus"],
+    ),
+    "hamachi-festival": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="The Hamachi Hunters crew in the merch at a festival",
+        match=["Slide — hamachi-festival"],
+    ),
+    "hamachi-tees": dict(
+        ratio=(16, 9), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Hamachi Hunters tees, black and yellow, in collaboration with Bricks & Wood",
+        match=["Slide — hamachi-tees"],
+    ),
+    "year-of-teddy": dict(
+        ratio=(4, 3),                      # square source, tall subject: 3:2 beheads the bear sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="A patchwork tweed teddy bear, its striped scarf carrying The Year of… label",
+        match=["Slide — year-of-teddy"],
+    ),
+    "tonymagnetic-buttons": dict(
+        ratio=(3, 2), sizes="(max-width: 64rem) 100vw, 86rem",
+        alt="Hand-cut coconut-shell buttons and toggles on a workbench",
+        match=["Slide — tonymagnetic-buttons"],
+    ),
 }
 
 PAGES = ["index.html", "work.html", "about.html", "contact.html"]
