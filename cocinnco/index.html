@@ -345,7 +345,7 @@
 <section class="wrap band-alt" id="collection" style="border-radius:0;">
   <div class="kicker-row"><span class="eyebrow">The collection</span><span class="rule"></span></div>
   <h2>Small forms, generous scent.</h2>
-  <p class="lead measure">Four hand-finished pieces, each cinnamon-cured to release a warm, sweet-spicy scent for months. Tap any piece to see it up close.</p>
+  <p class="lead measure">The full cocinnco range, each cinnamon-cured with high-oil Vietnamese cassia for a warm, sweet-spicy scent that lasts for months. Tap any piece to see it up close and buy on VIA.</p>
   <div class="grid-collection">
     <button class="piece" type="button" data-product="smiley" aria-haspopup="dialog">
       <span class="piece-figure"><img src="images/smiley-1.jpg" alt="Round wooden cocinnco Smiley tag, wood-burned with a smile and concentric rings" loading="lazy"></span>
@@ -362,6 +362,14 @@
     <button class="piece" type="button" data-product="yinyang" aria-haspopup="dialog">
       <span class="piece-figure"><img src="images/yinyang-1.jpg" alt="Heart cut from real coconut shell, two tones meeting like a yin-yang" loading="lazy"></span>
       <span class="piece-body"><span class="piece-kind">Signature &middot; Coconut shell</span><span class="piece-h3">The Yin-Yang Heart</span><span class="piece-p">Our signature heart, cut from real coconut shell. No two alike.</span><span class="piece-more">View details &rarr;</span></span>
+    </button>
+    <button class="piece" type="button" data-product="insoles" aria-haspopup="dialog">
+      <span class="piece-figure"><img src="images/insoles-1.jpg" alt="Sole-shaped cocinnco cinnamon insoles, wood-burned with tread and the cocinnco mark" loading="lazy"></span>
+      <span class="piece-body"><span class="piece-kind">Sneakers &middot; Gym bag</span><span class="piece-h3">Cinnamon Insoles</span><span class="piece-p">Tread-cut wooden soles that keep sneakers and gym bags fresh.</span><span class="piece-more">View details &rarr;</span></span>
+    </button>
+    <button class="piece" type="button" data-product="corporate" aria-haspopup="dialog">
+      <span class="piece-figure"><img src="images/corporate-1.jpg" alt="cocinnco piece laser-burned with a custom logo" loading="lazy"></span>
+      <span class="piece-body"><span class="piece-kind">Business &middot; Custom</span><span class="piece-h3">Corporate Gifts</span><span class="piece-p">Any cocinnco piece, laser-burned with your logo. Made to order.</span><span class="piece-more">View details &rarr;</span></span>
     </button>
   </div>
 </section>
@@ -384,7 +392,7 @@
       <p class="pdp-desc" id="pdp-desc"></p>
       <dl class="pdp-notes" id="pdp-notes"></dl>
       <p class="pdp-pack" id="pdp-pack"></p>
-      <a class="btn btn-primary" id="pdp-cta" href="#" target="_blank" rel="noopener">Buy on VIA <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-primary" id="pdp-cta" href="#" target="_blank" rel="noopener"><span id="pdp-cta-label">Buy on VIA</span> <span class="arrow">&rarr;</span></a>
       <p class="pdp-fine">Ships from Vietnam &middot; bought on the RRG marketplace &middot; each piece unique</p>
     </div>
   </div>
@@ -529,7 +537,17 @@
       images:["images/yinyang-1.jpg","images/yinyang-2.jpg","images/yinyang-3.jpg"],
       alt:"Heart cut from real coconut shell, two tones meeting like a yin-yang",
       desc:"Our signature piece: a heart cut from a real coconut shell, its two tones meeting like a yin-yang, polished on one face, raw shell on the other. Also offered in cinnamon wood. No two are alike.",
-      notes:[["Material","Upcycled coconut shell (also in wood)"],["Holds scent","Coconut shell carries cinnamon for months"],["Live with it","Wear it, hang it, or rest it in a bowl"]]}
+      notes:[["Material","Upcycled coconut shell (also in wood)"],["Holds scent","Coconut shell carries cinnamon for months"],["Live with it","Wear it, hang it, or rest it in a bowl"]]},
+    insoles: {kind:"Sneakers · Gym bag", name:"Cinnamon Insoles",
+      images:["images/insoles-1.jpg"],
+      alt:"Sole-shaped cocinnco cinnamon insoles, wood-burned with tread",
+      desc:"Sole-shaped fresheners laser-cut from cinnamon-cured wood and burned with sneaker tread, speckle, checkerboard or foot-map designs. Slip a pair into sneakers between wears, or hang one in a gym bag or shoe cupboard. Designs are assorted.",
+      notes:[["Material","Laser-cut cinnamon-cured wood"],["Best for","Sneakers, gym bags, shoe cupboards"],["Designs","Assorted, one of a kind"]]},
+    corporate: {kind:"Business · Custom", name:"Corporate Gifts",
+      images:["images/corporate-1.jpg"],
+      alt:"cocinnco piece laser-burned with a custom logo",
+      desc:"Any cocinnco piece made with your logo or design: the Smiley, the Cinnatree, the Love Letter, the Yin-Yang Heart or the cinnamon insoles, laser-burned into cinnamon-cured wood or coconut shell. A natural, plastic-free gift for clients, teams and events. Minimum order 250 pieces; artwork and delivery quoted on enquiry.",
+      notes:[["Material","Cinnamon-cured wood or coconut shell"],["Minimum","250 pieces"],["Made for","Client gifts, teams, events"]]}
   };
   var pdp=document.getElementById('pdp'), img=document.getElementById('pdp-img'),
       thumbs=document.getElementById('pdp-thumbs'), prev=document.getElementById('pdp-prev'),
@@ -541,7 +559,9 @@
     smiley:{url:"https://realrealgenuine.com/rrg/drop/23097", pack:"Pack of 5 \u00b7 59.95 USDC"},
     cinnatree:{url:"https://realrealgenuine.com/rrg/drop/23098", pack:"Pack of 5 \u00b7 49.95 USDC"},
     loveletter:{url:"https://realrealgenuine.com/rrg/drop/23099", pack:"Pack of 5 \u00b7 64.95 USDC"},
-    yinyang:{url:"https://realrealgenuine.com/rrg/drop/23100", pack:"Pack of 5 \u00b7 49.95 USDC"}
+    yinyang:{url:"https://realrealgenuine.com/rrg/drop/23100", pack:"Pack of 5 \u00b7 49.95 USDC"},
+    insoles:{url:"https://realrealgenuine.com/rrg/drop/23102", pack:"6 pairs · 45.00 USDC"},
+    corporate:{url:"https://realrealgenuine.com/rrg/drop/23103", pack:"Custom · min. 250 · quoted on enquiry", label:"Enquire on VIA"}
   };
 
   function show(i){
@@ -560,7 +580,7 @@
       var dd=document.createElement('dd'); dd.textContent=p.notes[n][1];
       notes.appendChild(dt); notes.appendChild(dd);
     }
-    var b=BUY[key]; cta.href=b.url; document.getElementById('pdp-pack').textContent=b.pack;
+    var b=BUY[key]; cta.href=b.url; document.getElementById('pdp-pack').textContent=b.pack; document.getElementById('pdp-cta-label').textContent=b.label||'Buy on VIA';
     thumbs.innerHTML=''; var multi=p.images.length>1;
     prev.hidden=!multi; next.hidden=!multi; thumbs.hidden=!multi;
     if(multi){
