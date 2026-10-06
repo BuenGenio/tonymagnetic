@@ -280,7 +280,8 @@
   .pdp-notes{margin:22px 0 0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px;}
   .pdp-notes dt{font-family:"Spline Sans Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--cinnamon); padding-top:3px;}
   .pdp-notes dd{margin:0; color:var(--ink-soft); font-size:.96rem;}
-  #pdp-cta{margin-top:28px; align-self:flex-start;}
+  .pdp-pack{margin:24px 0 2px; font-family:"Spline Sans Mono",monospace; font-size:13px; letter-spacing:.04em; color:var(--cinnamon); font-variant-numeric:tabular-nums;}
+  #pdp-cta{margin-top:8px; align-self:flex-start;}
   .pdp-fine{margin-top:16px; font-family:"Spline Sans Mono",monospace; font-size:11px; letter-spacing:.05em; color:var(--muted);}
   body.pdp-open{overflow:hidden;}
   @media (max-width:720px){
@@ -308,7 +309,7 @@
     <p class="hero-sub">cocinnco upcycles Vietnamese cinnamon bark and discarded coconut shells into aromatherapy pieces and keepsake ornaments, each one shaped by hand in a village outside Ho Chi Minh City.</p>
     <div class="hero-cta">
       <a href="#collection" class="btn btn-primary">Explore the collection <span class="arrow">→</span></a>
-      <a href="#wholesale" class="btn btn-ghost">Stock cocinnco</a>
+      <a href="https://realrealgenuine.com/brand/cocinnco" target="_blank" rel="noopener" class="btn btn-ghost">Buy on VIA</a>
     </div>
     <div class="hero-chips">
       <span class="chip">100% Upcycled</span>
@@ -382,8 +383,9 @@
       <h3 id="pdp-title"></h3>
       <p class="pdp-desc" id="pdp-desc"></p>
       <dl class="pdp-notes" id="pdp-notes"></dl>
-      <a class="btn btn-primary" id="pdp-cta" href="#">Enquire about this piece <span class="arrow">&rarr;</span></a>
-      <p class="pdp-fine">Hand-finished in Vietnam &middot; cinnamon-cured &middot; each piece unique</p>
+      <p class="pdp-pack" id="pdp-pack"></p>
+      <a class="btn btn-primary" id="pdp-cta" href="#" target="_blank" rel="noopener">Buy on VIA <span class="arrow">&rarr;</span></a>
+      <p class="pdp-fine">Ships from Vietnam &middot; bought on the RRG marketplace &middot; each piece unique</p>
     </div>
   </div>
 </div>
@@ -466,12 +468,12 @@
 
 <!-- CTA -->
 <section class="wrap cta">
-  <p class="eyebrow" style="color:#F6E4CE;">Retail · Wholesale · Gifting</p>
+  <p class="eyebrow" style="color:#F6E4CE;">Now on RRG &middot; Buy on VIA</p>
   <h2 style="margin-top:16px;">Bring a little of Vietnam's warmth home.</h2>
-  <p class="lead">Order a piece for your own doorway, or stock cocinnco on your shelves, a shelf-ready story of craft, scent, and sustainability.</p>
+  <p class="lead">Every cocinnco piece is now on the RRG marketplace, ready to buy on VIA. Browse the full range, or start with the five-piece Discovery Set.</p>
   <div class="hero-cta">
-    <a href="mailto:tonymagnetic@gmail.com" class="btn btn-primary">Enquire &amp; order <span class="arrow">→</span></a>
-    <a href="mailto:tonymagnetic@gmail.com" class="btn btn-ghost">Wholesale enquiries</a>
+    <a href="https://realrealgenuine.com/brand/cocinnco" target="_blank" rel="noopener" class="btn btn-primary">Buy on VIA <span class="arrow">→</span></a>
+    <a href="https://realrealgenuine.com/rrg/drop/23101" target="_blank" rel="noopener" class="btn btn-ghost">The Discovery Set</a>
   </div>
 </section>
 
@@ -535,6 +537,12 @@
       title=document.getElementById('pdp-title'), desc=document.getElementById('pdp-desc'),
       notes=document.getElementById('pdp-notes'), cta=document.getElementById('pdp-cta');
   var cur=null, idx=0, lastFocus=null;
+  var BUY = {
+    smiley:{url:"https://realrealgenuine.com/rrg/drop/23097", pack:"Pack of 5 \u00b7 59.95 USDC"},
+    cinnatree:{url:"https://realrealgenuine.com/rrg/drop/23098", pack:"Pack of 5 \u00b7 49.95 USDC"},
+    loveletter:{url:"https://realrealgenuine.com/rrg/drop/23099", pack:"Pack of 5 \u00b7 64.95 USDC"},
+    yinyang:{url:"https://realrealgenuine.com/rrg/drop/23100", pack:"Pack of 5 \u00b7 49.95 USDC"}
+  };
 
   function show(i){
     var p=P[cur]; idx=(i+p.images.length)%p.images.length;
@@ -552,7 +560,7 @@
       var dd=document.createElement('dd'); dd.textContent=p.notes[n][1];
       notes.appendChild(dt); notes.appendChild(dd);
     }
-    cta.href='mailto:tonymagnetic@gmail.com?subject=Enquiry%3A%20'+encodeURIComponent(p.name);
+    var b=BUY[key]; cta.href=b.url; document.getElementById('pdp-pack').textContent=b.pack;
     thumbs.innerHTML=''; var multi=p.images.length>1;
     prev.hidden=!multi; next.hidden=!multi; thumbs.hidden=!multi;
     if(multi){
